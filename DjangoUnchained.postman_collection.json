@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "2ad15930-ec1b-4e67-b2bc-9554201ce09c",
+		"name": "DjangoUnchained",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28114176"
+	},
+	"item": [
+		{
+			"name": "User Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"username\": \"testuser\",\r\n        \"email\": \"testuser@example.com\",\r\n        \"password\": \"Hangwani@23\",\r\n        \"first_name\": \"Test\",\r\n        \"last_name\": \"User\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Access Endpoints",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/me/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"me",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Resources",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/resources/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"resources",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Resource",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3NjgyMjkxLCJpYXQiOjE3NDc2Nzg2OTEsImp0aSI6IjU4ZjFiNDNjYjAzNDQxMWU5ZWZlYmMzNjNmMWZkMjVkIiwidXNlcl9pZCI6MX0.PpyTeY5Rk1WZark5lI8nOjoXef61NV9maCs1Vhlak5s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\r\n            \"name\": \"My First Resource\",\r\n            \"description\": \"Details about my resource\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/resources/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"resources",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Resource",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3NjgxMjYyLCJpYXQiOjE3NDc2Nzc2NjIsImp0aSI6IjAyZmYyY2ZmODBkOTRiOTk5ZGYwMjY0ZWY5ZTRjYTVmIiwidXNlcl9pZCI6Mn0.hhTljscsr9pAOU5_82V6h5TDElIQ_ZGSTWBYCBay0o8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/resources/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"resources",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Resource",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3NjgxMjYyLCJpYXQiOjE3NDc2Nzc2NjIsImp0aSI6IjAyZmYyY2ZmODBkOTRiOTk5ZGYwMjY0ZWY5ZTRjYTVmIiwidXNlcl9pZCI6Mn0.hhTljscsr9pAOU5_82V6h5TDElIQ_ZGSTWBYCBay0o8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\r\n            \"name\": \"Updated Resource Name\",\r\n            \"description\": \"New description\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/resources/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"resources",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Resource",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/resources/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"resources",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3NjgyMjkxLCJpYXQiOjE3NDc2Nzg2OTEsImp0aSI6IjU4ZjFiNDNjYjAzNDQxMWU5ZWZlYmMzNjNmMWZkMjVkIiwidXNlcl9pZCI6MX0.PpyTeY5Rk1WZark5lI8nOjoXef61NV9maCs1Vhlak5s",
+				"type": "string"
+			}
+		]
+	}
+}
